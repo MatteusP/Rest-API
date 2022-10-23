@@ -1,0 +1,17 @@
+services:
+  app:
+    container_name: springboot-postgresql
+    image: springboot-postgresql
+    build: ./
+    ports:
+      - "localhost:8181"
+    depends_on:
+      - postgresqldb
+    postgresqldb:
+      image: postgres
+      ports:
+        - 5432
+      environment:
+        - POSTGRES_PASSWORD=1234
+        - POSTGRES_USER=postegres
+        - POSTEGRES_DB=APIRest-pg
