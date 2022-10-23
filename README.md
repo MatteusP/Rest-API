@@ -1,1 +1,1 @@
-## Rest API com Spring Boot, postegres e vueJS
+## Rest API com Spring Boot, postgres e vueJS
