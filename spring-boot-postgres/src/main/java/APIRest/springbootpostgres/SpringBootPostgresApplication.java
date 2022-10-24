@@ -13,9 +13,5 @@ public class SpringBootPostgresApplication {
 		SpringApplication.run(SpringBootPostgresApplication.class, args);
 	}
 
-	@GetMapping("/")
-	public String index(){
-		return "olá Mundo";
-	}
 
 }
