@@ -1,7 +1,6 @@
 <template>
   <div>
         <H1>Header</H1>
-        <Nuxt />
   </div>
 </template>
 
@@ -10,7 +9,3 @@ export default {
 
 }
 </script>
-
-<style>
-
-</style>
