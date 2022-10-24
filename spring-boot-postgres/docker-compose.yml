@@ -1,10 +1,11 @@
+version: '3'
 services:
   app:
     container_name: springboot-postgresql
     image: springboot-postgresql
     build: ./
     ports:
-      - "localhost:8181"
+      - "8000:8181"
     depends_on:
       - postgresqldb
     postgresqldb:

@@ -1,37 +1,25 @@
-package APIRest.springbootpostgres.models;
+package APIRest.springbootpostgres.dtos;
 
-import javax.persistence.*;
-import java.util.UUID;
+import org.hibernate.validator.constraints.br.CPF;
 
-@Entity
-@Table(name = "TB_USUARIOS")
-public class Usuario {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column(nullable = false, length = 100)
+import javax.persistence.Column;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+public class UsuarioDto {
+    @NotBlank
     private String nome;
-    @Column(nullable = false, unique = true, length = 15)
+    @NotBlank
+    @CPF
     private String cpf;
-    @Column(nullable = false, unique = true, length = 15)
+    @NotBlank
     private String rg;
-    @Column(nullable = false, length = 10)
+    @NotBlank
     private String data_de_nascimento;
-    @Column(nullable = false, length = 100)
+    @NotBlank
     private String nome_mae;
-    @Column(nullable = false, length = 10)
+    @NotBlank
     private String data_de_cadastro;
-
-    public Usuario() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;
@@ -80,5 +68,4 @@ public class Usuario {
     public void setData_de_cadastro(String data_de_cadastro) {
         this.data_de_cadastro = data_de_cadastro;
     }
-
 }
